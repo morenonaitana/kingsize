@@ -1,0 +1,43 @@
+.grid{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -2;
+    /* pointer-events: none; */
+  }
+
+  
+
+  .grid .column{
+
+    width: 5vw;
+
+  }
+
+  
+
+  .column div{
+
+    width: 100%;
+
+    height: 5vw;
+
+    border: 1px solid red;
+
+  }
+
+  .custom-list {
+    list-style-type: none; /* Removes default list bullet */
+  }
+  
+  .custom-list-item::before {
+    content: '';
+    display: inline-block;
+    width: 20px; /* Width of your icon */
+    height: 20px; /* Height of your icon */
+    background-image: url('/check.svg'); /* Path to your icon image */
+    background-size: contain;
+    margin-right: 8px; /* Adjust space between icon and text */
+  }

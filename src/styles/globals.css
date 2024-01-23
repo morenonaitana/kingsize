@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('/fonts/telegraf-bold-webfont.woff2') format('woff2'),
+         url('/fonts/telegraf-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Telegraf';
+    src: url('/fonts/telegraf-regular-webfont.woff2') format('woff2'),
+            url('/fonts/telegraf-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    src: url('/fonts/telegraf-ultrabold-webfont.woff2') format('woff2'),
+            url('/fonts/telegraf-ultrabold-webfont.woff') format('woff');
+    font-weight: 800;  /* Assuming ultra bold is weight 800 */
+    font-style: normal;
+}
+  
+
+body {
+    background-color: black;
+    font-family: 'Telegraf', sans-serif;
+}
+
+.custom-list {
+    list-style-type: none; /* Removes default list bullet */
+  }
+  
+  .custom-list-item::before {
+    content: '';
+    display: inline-block;
+    width: 20px; /* Width of your icon */
+    height: 20px; /* Height of your icon */
+    background-image: url('/check.svg'); /* Path to your icon image */
+    background-size: contain;
+    margin-right: 8px; /* Adjust space between icon and text */
+    margin-bottom: -3px;
+  }

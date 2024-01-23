@@ -1,0 +1,13 @@
+.custom-list {
+    list-style-type: none; /* Removes default list bullet */
+  }
+  
+  .custom-list-item::before {
+    content: '';
+    display: inline-block;
+    width: 20px; /* Width of your icon */
+    height: 20px; /* Height of your icon */
+    background-image: url('/check.svg'); /* Path to your icon image */
+    background-size: contain;
+    margin-right: 8px; /* Adjust space between icon and text */
+  }
