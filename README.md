@@ -1,4 +1,4 @@
-# Create T3 App
+# KingSize Offer Landing
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
@@ -9,7 +9,7 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 - [Prisma](https://prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
-  = [pnpm](https://pnpm.io/)
+- [pnpm](https://pnpm.io/)
 
 ## Learn More
 
