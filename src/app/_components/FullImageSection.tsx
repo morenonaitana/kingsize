@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import React, { useRef } from 'react';
+import React from 'react';
 
 export const FullImageSection = () => {
     const textVariants = {

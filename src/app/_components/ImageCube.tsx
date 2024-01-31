@@ -1,14 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ScrollScene, UseCanvas, useScrollbar, useScrollRig, styles, useImageAsTexture, useTracker } from '@14islands/r3f-scroll-rig'
 import { extend, useFrame, Canvas } from '@react-three/fiber'
-import { MeshWobbleMaterial, shaderMaterial, useTexture, Points, PointMaterial, OrbitControls } from '@react-three/drei'
+import { MeshWobbleMaterial, shaderMaterial, Points, PointMaterial } from '@react-three/drei'
 import { a, useSpring, config } from '@react-spring/three'
-import * as THREE from 'three';
-import { motion, useMotionValue, useScroll, useTransform, useViewportScroll } from 'framer-motion'
+import { motion, useMotionValue, useScroll, useTransform } from 'framer-motion'
 import * as random from 'maath/random/dist/maath-random.esm'
-import { useTrackerMotionValue } from '.'
-
-const { TextureLoader } = THREE;
 
 export const ImageFadeMaterial = shaderMaterial(
   {
@@ -230,3 +226,25 @@ const WebGLCube = ({ img, scale, inViewport }) => {
       </div>
     )
   }
+
+  // export const DistortMesh = ({src}) => {
+//     const el = useRef()
+//     const texture = useLoader(TextureLoader, src);
+//     return (
+//       <>
+//         <div ref={el} className="Placeholder ScrollScene h-[478px] w-[720px] m-auto"></div>
+//         <UseCanvas>
+//           <ambientLight intensity={0.5} />
+//           <pointLight position={[10, 10, 10]} />
+//           <ScrollScene track={el}>
+//             {(props) => (
+//               <mesh {...props}>
+//               <planeGeometry args={[1, 1, 16, 16]} />
+//               <MeshDistortMaterial speed={2} distort={0.1} map={texture} />
+//             </mesh>
+//             )}
+//           </ScrollScene>
+//         </UseCanvas>
+//       </>
+//     )
+//   }

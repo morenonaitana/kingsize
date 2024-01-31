@@ -1,8 +1,7 @@
 "use client";
-import { motion, useTransform } from 'framer-motion';
-import React, { useRef } from 'react';
-import { DodecaScene, DodecaSceneSmall, ExampleComponent, TextWord } from '.';
-import { useTracker } from '@14islands/r3f-scroll-rig';
+import { motion } from 'framer-motion';
+import React from 'react';
+import { DodecaScene, DodecaSceneSmall, TextWord } from '.';
 
 export const VisionSection = () => {
   const itemVariants = {
@@ -25,22 +24,11 @@ export const VisionSection = () => {
       >
         <motion.div className="md:flex-1 flex items-center justify-center max-w-[640px]" variants={itemVariants}>
           <div>
-            {/* <motion.h2 className="text-6xl font-bold mb-8 text-white" variants={itemVariants}>
-                CRAFTING EXCELLENCE - Global Innovation Meets Exclusive Offer
-            </motion.h2> */}
             <h2 className="text-6xl font-bold mb-8 text-white">
               {heading.map((word, index) => (
                 <TextWord word={word} index={index + heading.length} key={index} />
               ))}
             </h2>
-            {/* <ImageCube
-              src="/cube.jpg"
-              className="JellyPlaceholder"
-            /> */}
-            {/* <VideoCube
-              src="/cube.jpg"
-              className="JellyPlaceholder"
-            /> */}
             <div className="relative w-full rounded-2xl overflow-hidden" style={{ paddingTop: "56.25%" }}>
               <video 
                 autoPlay 
@@ -67,7 +55,6 @@ export const VisionSection = () => {
       </motion.div>
       <div className="absolute bottom right mt-20 h-[300px] w-full">
         <DodecaScene />
-        {/* <ExampleComponent /> */}
       </div>
       <div className="absolute bottom left left-8 h-[300px] h-[300px]">
         <DodecaSceneSmall />

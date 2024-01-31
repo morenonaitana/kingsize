@@ -7,7 +7,6 @@ export * from './FullImageSection';
 export * from './WhatWeDoSection';
 export * from './WorkSection';
 export * from './AuditSection';
-export * from './DigitalLandscape';
 export * from './Aquarium';
 export * from './Box';
 export * from './ImageCube';

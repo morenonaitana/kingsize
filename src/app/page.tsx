@@ -1,29 +1,26 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { GlobalCanvas, SmoothScrollbar } from "@14islands/r3f-scroll-rig";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { Effects, Scroll, ScrollControls } from '@react-three/drei';
-import { Canvas, extend, useFrame } from '@react-three/fiber';
+import { extend } from '@react-three/fiber';
 import AnimatedCursor from "react-animated-cursor";
-import { loadSlim } from "@tsparticles/slim";
 import styles from './page.module.css';
 import { WaterPass, GlitchPass } from 'three-stdlib'
-import { HomeBanner, Navigation, VisionSection, FullImageSection, WhatWeDoSection, AuditSection, ExploreWork, WorkSection, Footer, ParticlesScene, Stars, StarsScene, VideoCubeScene } from "@components";
+import { HomeBanner, Navigation, VisionSection, WhatWeDoSection, AuditSection, WorkSection, Footer } from "@components";
 
 import "@14islands/r3f-scroll-rig/css";
 
 extend({ WaterPass, GlitchPass })
 
-function Postpro() {
-  const ref = useRef()
-  useFrame((state) => (ref.current.time = state.clock.elapsedTime * 3))
-  return (
-    <Effects>
-      <waterPass ref={ref} factor={0.5} />
-      {/* <glitchPass /> */}
-    </Effects>
-  )
-}
+// function Postpro() {
+//   const ref = useRef()
+//   useFrame((state) => (ref.current.time = state.clock.elapsedTime * 3))
+//   return (
+//     <Effects>
+//       <waterPass ref={ref} factor={0.5} />
+//       <glitchPass />
+//     </Effects>
+//   )
+// }
 
 export default function Home() {
 
@@ -52,7 +49,6 @@ export default function Home() {
             <VisionSection />
             <WhatWeDoSection />
             <WorkSection />
-            {/* <VideoCubeScene /> */}
             <AuditSection />
             <Footer />
           </div>

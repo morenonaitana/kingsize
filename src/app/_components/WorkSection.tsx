@@ -2,11 +2,7 @@
 import { motion, useTransform } from 'framer-motion';
 import React, { useRef } from 'react';
 import { ExploreWork, useTrackerMotionValue } from '.';
-import { ScrollScene, UseCanvas, useTracker } from '@14islands/r3f-scroll-rig';
-import { MeshDistortMaterial} from '@react-three/drei';
-import { useLoader } from '@react-three/fiber';
-import { TextureLoader } from 'three';
-import FadingImage from './FadingImage';
+import { useTracker } from '@14islands/r3f-scroll-rig';
 
 function HorizontalMarquee() {
   const el = useRef()
@@ -59,28 +55,6 @@ function VerticalParallax({ children, src }) {
   )
 }
 
-export const ExampleComponent = ({src}) => {
-    const el = useRef()
-    const texture = useLoader(TextureLoader, src);
-    return (
-      <>
-        <div ref={el} className="Placeholder ScrollScene h-[478px] w-[720px] m-auto"></div>
-        <UseCanvas>
-          {/* <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} /> */}
-          <ScrollScene track={el}>
-            {(props) => (
-              <mesh {...props}>
-              <planeGeometry args={[1, 1, 16, 16]} />
-              <MeshDistortMaterial speed={2} distort={0.1} map={texture} />
-            </mesh>
-            )}
-          </ScrollScene>
-        </UseCanvas>
-      </>
-    )
-  }
-
 function VerticalParallaxReverse({ children, src }) {
   const el = useRef()
   const tracker = useTracker(el)
@@ -123,9 +97,6 @@ export const WorkSection = () => {
 
   return (
     <div className="mx-auto my-12 w-full">
-      {/* <div className="w-full h-[200px]">
-        <ExampleComponent src="/mosaert.webp" />
-      </div> */}
       <div className="container m-auto flex flex-col justify-center items-center">
         <ExploreWork />
         <div>
@@ -177,7 +148,6 @@ export const WorkSection = () => {
               <Button text="See Project" link="https://kingsize.co/works/sweet-lemon/" />
             </VerticalParallaxReverse>
           </div>
-          {/* <VerticalParallax src="/mosaert.webp">Moasaert</VerticalParallax> */}
         </div>
         <motion.a
           variants={textVariants}

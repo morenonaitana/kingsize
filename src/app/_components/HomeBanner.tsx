@@ -1,7 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import React from 'react';
-import { AquariumRender, Particles, TextWord } from '.';
+import { AquariumRender, TextWord } from '.';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,18 +35,6 @@ export const HomeBanner = () => {
         animate="visible"
         className="z-10 pointer-events-none"
       >
-        {/* <motion.h1
-          variants={textVariants}
-          className="text-5xl lg:text-8xl font-bold tracking-tighter mb-8"
-        >
-          ELEVATING BRANDS WITH
-        </motion.h1>
-        <motion.h2
-          variants={textVariants}
-          className="text-5xl lg:text-8xl font-bold"
-        >
-          NEXT GEN DESIGN & TECH
-        </motion.h2> */}
         <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter mb-8">
           {heading1.map((word, index) => (
             <TextWord word={word} index={index} key={index} />
